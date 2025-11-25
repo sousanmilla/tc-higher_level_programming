@@ -1,11 +1,4 @@
 #!/usr/bin/python3
-str = "The Zen of Python, by Tim Peters"
-str2 = "Beautiful is better than ugly."
-str3 = "Explicit is better than implicit."
-str4 = "Simple is better than complex."
-str5 = "Complex is better than complicated."
-str6 = "Flat is better than nested."
-str7 = "Sparse is better than dense."
 print("The Zen of Python, by Tim Peters")
 print("\nBeautiful is better than ugly.")
 print("Explicit is better than implicit.")
