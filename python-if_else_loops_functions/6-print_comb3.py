@@ -4,7 +4,7 @@ for i in range(1, 40):
         continue
     print("{:02d}, ".format(i), end="")
 for i in range(45, 80):
-    if i > 59 and i < 67 or i > 69 and i < 78:
+    if i > 49 and i < 56 or i > 59 and i < 67 or i > 69 and i < 78:
         continue
     print("{:02d}, ".format(i), end="")
 print(89)
