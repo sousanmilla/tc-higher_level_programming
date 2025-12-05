@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-p = "best"
-s = "Best School 98 Battery street"
 def uppercase(str):
     result = ""
     for char in str:
@@ -9,6 +7,6 @@ def uppercase(str):
             result += chr(char_code - 32)
         else:
             result += char
-    return result
-print("{}".format(uppercase(p)))
-print("{}".format(uppercase(s)))
+    print(result)
+(uppercase("{}".format("best")))
+(uppercase("{}".format("Best School 98 Battery street")))
