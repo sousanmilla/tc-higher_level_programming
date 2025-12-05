@@ -8,3 +8,4 @@ def uppercase(str):
         else:
             result += char
     print(result)
+(uppercase("holberton"))
