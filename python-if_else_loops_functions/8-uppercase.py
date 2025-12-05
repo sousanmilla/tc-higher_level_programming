@@ -8,4 +8,4 @@ def uppercase(str):
         else:
             result += char
     print(result)
-uppercase("{}".format("holberto"))
+uppercase("{}".format("holberton"))
