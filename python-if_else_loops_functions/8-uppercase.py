@@ -8,4 +8,5 @@ def uppercase(str):
         else:
             result += char
     print(result)
-uppercase("{}".format("holberton"))
+if __name__ == "__main__":
+    uppercase("{}".format("holberton"))
