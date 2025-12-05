@@ -8,5 +8,5 @@ def uppercase(str):
         else:
             result += char
     return result
-    print(uppercase("best"))
-    print(uppercase("Best School 98 Battery street"))
+print(uppercase("best"))
+print(uppercase("Best School 98 Battery street"))
