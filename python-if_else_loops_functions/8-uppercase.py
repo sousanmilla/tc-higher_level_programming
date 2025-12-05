@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 p = "best"
-s = "school 98 Battery street"
+s = "Best School 98 Battery street"
 def uppercase(str):
     result = ""
     for char in str:
@@ -11,4 +11,4 @@ def uppercase(str):
             result += char
     return result
 print("{}".format(uppercase(p)))
-print("{}".format(uppercase(p)),"{}".format(uppercase(s)))
+print("{}".format(uppercase(s)))
