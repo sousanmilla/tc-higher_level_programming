@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def pow(a, b):
-    multi = a ** b
-    return multi
+    elev = a ** b
+    return elev
 
 
 if __name__ == "__main__":
