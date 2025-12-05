@@ -9,4 +9,3 @@ def uppercase(str):
             result += char
     print(result)
 (uppercase("{}".format("best")))
-(uppercase("{}".format("Best School 98 Battery street")))
