@@ -1,7 +1,7 @@
 #!/usr/bin/python3
+
+
 def uppercase(str):
-
-
     result = ""
     for char in str:
         char_code = ord(char)
@@ -11,6 +11,6 @@ def uppercase(str):
             result += char
     print(result)
 
-    
+
 if __name__ == "__main__":
     uppercase("{}".format("holberton"))
