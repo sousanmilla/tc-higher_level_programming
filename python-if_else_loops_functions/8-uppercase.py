@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-s = input("digite:")
 def uppercase(str):
     result = ""
     for char in str:
@@ -9,4 +8,4 @@ def uppercase(str):
         else:
             result += char
     print(result)
-(uppercase("{}".format(s)))
+uppercase("best")
