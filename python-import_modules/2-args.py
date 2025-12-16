@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 import sys
 
+
 def main():
 
     n = len(sys.argv) - 1
     args = sys.argv[1:]
+
     if n == 1:
         print("{} argument:".format(n))
     elif n == 0:
