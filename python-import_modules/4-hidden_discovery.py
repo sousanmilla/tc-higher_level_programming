@@ -9,5 +9,6 @@ def main():
     for nome in sorted(nomes_fil):
         print("{}".format(nome))
 
+
 if __name__ == "__main__":
     main()
