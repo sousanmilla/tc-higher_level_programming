@@ -2,7 +2,10 @@
 
 def max_integer(my_list=[]):
     my_list.sort(reverse=True)
-    return my_list[0]
+    if my_list:
+        return my_list[0]
+    else:
+        return None
 
 
 if __name__ == "__main__":
