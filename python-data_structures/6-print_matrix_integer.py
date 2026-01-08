@@ -2,8 +2,7 @@
 
 def print_matrix_integer(matrix=[[]]):
     for i in matrix:
-        print(" ".join("{:d}".format(valor) for valor in i), end="")
-        print("$")
+        print(" ".join("{:d}".format(valor) for valor in i))
 
 
 if __name__ == "__main__":
