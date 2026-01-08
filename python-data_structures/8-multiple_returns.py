@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 
 def multiple_returns(frase):
-    return (len(frase), frase[0])
+    if frase:
+        return (len(frase), frase[0])
+    else:
+        return (0, None)
 
 
 if __name__ == "__main__":
