@@ -2,7 +2,7 @@
 
 def zipping_data(list1, list2):
     for a, b in zip(list1, list2):
-        print('{}: R$ {}.'.format(a, b))
+        print('{}: R$ {:.2f}'.format(a, b))
 
 
 if __name__ == "__main__":
