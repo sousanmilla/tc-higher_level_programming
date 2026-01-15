@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 def filtering_data(a_dictionary):
-    filtro = list(filter(lambda i: i['salary'] > 10000, employees))
+    filtro = list(filter(lambda i: i['salary'] > 10000, a_dictionary))
     nomes = map(lambda p: p['name'], filtro)
     return list(nomes)
 
