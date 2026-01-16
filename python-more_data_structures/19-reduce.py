@@ -4,8 +4,8 @@ from functools import reduce
 
 
 def calc_average(a_dictionary):
-    salaries = [item['salary'] for item in data]
-    ages = [item['age'] for item in data]
+    salaries = [item['salary'] for item in a_dictionary]
+    ages = [item['age'] for item in a_dictionary]
     somas = reduce(lambda x, y: x + y, salaries)
     somaa = reduce(lambda x, y: x + y, ages)
     n = len(a_dictionary)
