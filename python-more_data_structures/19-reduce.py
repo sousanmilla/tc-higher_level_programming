@@ -3,12 +3,11 @@
 from functools import reduce
 
 
-def calc_average(a_list):
-    total_salary = reduce(lambda acc, item: acc + item['salary'], a_list, 0)
-    total_age = reduce(lambda acc, item: acc + item['age'], a_list, 0)
-
-    avg_salary = total_salary / len(a_list)
-    avg_age = total_age / len(a_list)
+def calc_average(a_dictionary):
+    total_salary = reduce(lambda acc, item: acc + item['salary'], a_dictionary, 0)
+    total_age = reduce(lambda acc, item: acc + item['age'], a_dictionary, 0)
+    avg_salary = total_salary / len(a_dictionary)
+    avg_age = total_age / len(a_dictionary)
     return avg_salary, avg_age
 
 
@@ -26,4 +25,3 @@ if __name__ == "__main__":
         f'The average salary is R${average_salary:.2f} '
         f'with an average age of {average_age}'
     )
-
