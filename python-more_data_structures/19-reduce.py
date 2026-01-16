@@ -4,16 +4,12 @@ from functools import reduce
 
 
 def calc_average(a_dictionary):
+    salaries = [item['salary'] for item in data]
+    ages = [item['age'] for item in data]
+    somas = reduce(lambda x, y: x + y, salaries)
+    somaa = reduce(lambda x, y: x + y, ages)
     n = len(a_dictionary)
-    if n == 0:
-        return 0.0, 0.0
-
-    meds, medi = reduce(
-        lambda acc, r: (acc[0] + r['salary'], acc[1] + r['age']),
-        a_dictionary,
-        (0.0, 0.0)
-        )
-    return meds / n, medi / n
+    return somas / n, somaa / n
 
 
 if __name__ == "__main__":
