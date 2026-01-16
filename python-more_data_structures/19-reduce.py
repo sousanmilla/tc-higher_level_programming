@@ -4,9 +4,6 @@ from functools import reduce
 
 
 def calc_average(a_dictionary):
-    if not isinstance(a_dictionary, list) or (a_dictionary and not isinstance(a_dictionary[0], dict)):
-        raise TypeError("calc_average(a_dictionary): 'a_dictionary' deve ser list[dict].")
-
     n = len(a_dictionary)
     if n == 0:
         return 0.0, 0.0
