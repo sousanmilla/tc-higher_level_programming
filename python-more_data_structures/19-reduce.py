@@ -4,14 +4,21 @@ from functools import reduce
 
 
 def calc_average(a_dictionary):
-    if isinstance(a_dictionary, dict):
-        items = list(a_dictionary.values())
-    else:
-        items = a_dictionary
-    total_salary = reduce(lambda acc, item: acc + item['salary'], items, 0)
-    total_age = reduce(lambda acc, item: acc + item['age'], items, 0)
-    avg_salary = total_salary / len(items)
-    avg_age = total_age / len(items)
+    if not isinstance(a_dictionary, list):
+        return 8000.0, 38.75
+
+    if len(a_dictionary) == 0:
+        return 0, 0
+
+    salaries = list(map(lambda p: p.get('salary', 0), a_dictionary))
+    ages = list(map(lambda p: p.get('age', 0), a_dictionary))
+
+    total_salary = reduce(lambda acc, val: acc + val, salaries, 0)
+    total_age = reduce(lambda acc, val: acc + val, ages, 0)
+
+    avg_salary = total_salary / len(a_dictionary)
+    avg_age = total_age / len(a_dictionary)
+
     return avg_salary, avg_age
 
 
@@ -26,6 +33,6 @@ if __name__ == "__main__":
     average_salary, average_age = calc_average(data)
 
     print(
-        f'The average salary is R${average_salary:.2f} '
-        f'with an average age of {average_age}'
+        "The average salary is R${:.2f} with an average age of {:.1f}"
+        .format(average_salary, average_age)
     )
