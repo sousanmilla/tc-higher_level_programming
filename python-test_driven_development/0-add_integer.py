@@ -20,7 +20,7 @@ def add_integer(a, b=98):
             if x != x:
                 raise ValueError("cannot convert float NaN to integer")
             if x == float('inf') or x == float('-inf'):
-                raise OverflowError("cannot convert float infinity to integer")   
+                raise OverflowError("cannot convert float infinity to integer")
         return int(x)
 
     return to_int(a, "a") + to_int(b, "b")
