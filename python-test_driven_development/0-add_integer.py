@@ -8,13 +8,16 @@ Que retorna o inteiro da soma de dois valores.
 def add_integer(a, b=98):
     """A função retorna um número inteiro, a soma de a e b."""
     def _invalid_float(x):
-        return isinstance(x, float) and (x != x or x == float('inf') or x == float('-inf'))
+        return isinstance(x, float) and (x != x or x == float(
+            'inf') or x == float('-inf'))
 
-    if not isinstance(a, (int, float)):
+    if not isinstance(a, (int, float)) or _invalid_float(a):
         raise TypeError("a must be an integer")
-    if not isinstance(b, (int, float)):
+    if not isinstance(b, (int, float)) or _invalid_float(b):
         raise TypeError("b must be an integer")
-    return int(a) + int(b)
+    a = int(a)
+    b = int(b)
+    return a + b
 
 
 if __name__ == "__main__":
