@@ -2,11 +2,14 @@
 """
 O módulo contem a função add_integer.
 Que retorna o inteiro da soma de dois valores.
+E contem um arquivo de texto para teste nesse mesmo diretorio
 """
 
 
 def add_integer(a, b=98):
-    """A função retorna um número inteiro, a soma de a e b."""
+    """
+    A função retorna um número inteiro, a soma de a e b.
+    """
     def _invalid_float(x):
         return isinstance(x, float) and (x != x or x == float(
             'inf') or x == float('-inf'))
@@ -18,14 +21,6 @@ def add_integer(a, b=98):
     a = int(a)
     b = int(b)
     return a + b
-
-
-assert add_integer(1, 2) == 3
-assert add_integer(100, -2) == 98
-assert add_integer(2) == 100
-assert add_integer(100.3, -2) == 98
-assert add_integer(0, 0) == 0
-assert add_integer(-5) == 93
 
 
 if __name__ == "__main__":
