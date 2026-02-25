@@ -10,17 +10,20 @@ def add_integer(a, b=98):
     """
     A função retorna um número inteiro, a soma de a e b.
     """
-    def _invalid_float(x):
-        return isinstance(x, float) and (x != x or x == float(
-            'inf') or x == float('-inf'))
-
-    if not isinstance(a, (int, float)) or _invalid_float(a):
+    if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
-    if not isinstance(b, (int, float)) or _invalid_float(b):
+    if not isinstance(b, (int, float)):
         raise TypeError("b must be an integer")
-    a = int(a)
-    b = int(b)
-    return a + b
+
+    def to_int(x, which):
+        if isinstance(x, float):
+            if x != x:
+                raise ValueError("cannot convert float NaN to integer")
+            if x == float('inf') or x == float('-inf'):
+                raise OverflowError("cannot convert float infinity to integer")   
+        return int(x)
+
+    return to_int(a, "a") + to_int(b, "b")
 
 
 if __name__ == "__main__":
