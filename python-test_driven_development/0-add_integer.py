@@ -1,12 +1,15 @@
 #!/usr/bin/python3
 """
-O módulo contei a função add_integer.
+O módulo contem a função add_integer.
 Que retorna o inteiro da soma de dois valores.
 """
 
 
 def add_integer(a, b=98):
     """A função retorna um número inteiro, a soma de a e b."""
+    def _invalid_float(x):
+        return isinstance(x, float) and (x != x or x == float('inf') or x == float('-inf'))
+
     if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
     if not isinstance(b, (int, float)):
