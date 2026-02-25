@@ -5,9 +5,19 @@ Esse módulo contem uma função para divisão de um amatriz por um número inte
 
 
 def matrix_divided(matrix, div):
-    """Conferindo que a matrix só contem números."""
-    if not all(isinstance(row, list) for row in matrix):
-        raise TypeError("matrix must be a matrix (list of lists)")
+    """Conferindo que a matrix é uma lista de listas que só contem números."""
+    if (not isinstance(matrix, list) or matrix == [] or
+            not all(isinstance(row, list) for row in matrix)):
+        raise TypeError(
+            "matrix must be a matrix (list of lists) of integers/floats"
+        )
+    for row in matrix:
+        for value in row:
+            if not isinstance(value, (int, float)):
+                raise TypeError(
+                    "matrix must be a matrix (list of lists)"
+                    " of integers/floats"
+                )
     """Conferindo que as linhas da matrix tem o mesmo tamanho."""
     row_length = len(matrix[0])
     for row in matrix:
