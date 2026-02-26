@@ -9,3 +9,17 @@ TypeError: text must be a string
 Traceback (most recent call last):
 ...
 TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+>>> text_indentation("A primeira. Segunda? Terceira: fim")
+A primeira.
+<BLANKLINE>
+Segunda?
+<BLANKLINE>
+Terceira:
+<BLANKLINE>
+fim
+
+>>> text_indentation("linha 1\n\nlinha 3")
+linha 1
+<BLANKLINE>
+linha 3
