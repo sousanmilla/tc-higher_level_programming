@@ -35,8 +35,6 @@ class TestMaxInteger(unittest.TestCase):
     def test_max_tudo_igual(self):
         self.assertTrue(max_integer([4, 4, 4, 4]) == 4)
 
-    def test_max_tudo_igual(self):
-        self.assertTrue(max_integer([4, 4, 4, 4]) == 4)
 
     def test_max_tudo_negativo(self):
         self.assertTrue(max_integer([-1, -3, -4, -2]) == -1)
@@ -46,7 +44,3 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_vazio(self):
         self.assertTrue(max_integer() is None)
-
-
-if __name__ == '__main__':
-    unittest.main()
